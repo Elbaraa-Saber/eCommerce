@@ -2,12 +2,12 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // layouts
 import {MainLayout} from '@layouts/index'
 // Pages
-import Home from '@pages/Home';
-import Categories from '@pages/Categories';
-import Products from '@pages/Products';
-import AboutUs from '@pages/AboutUs';
-import Login from '@pages/Login';
-import Register from '@pages/Register';
+import Home from '@pages/Home/Home';
+import Categories from '@pages/Categories/Categories';
+import Products from '@pages/Products/Products';
+import AboutUs from '@pages/AboutUs/AboutUs';
+import Login from '@pages/Login/Login';
+import Register from '@pages/Register/Register';
 import Error from '@pages/Error/Error';
 
 const router = createBrowserRouter([{
