@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap"
 import styles from "./styles.module.css"
-import Header from "../../eCommerce/common/Header/Header";
+import { Header, Footer } from "../../components/common";
+
 const { container , wrapper } = styles;
 
 function MainLayout() {
@@ -8,6 +9,7 @@ function MainLayout() {
     <Container className={container}>
         <Header/>
       <div className={wrapper}>Wripper</div>
+      <Footer/>
     </Container>
   )
 }
