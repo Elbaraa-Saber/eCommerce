@@ -1,4 +1,4 @@
-import { HeaderBasket } from "../../eCommerce";
+import { HeaderBasket } from "../../eCommerce/index";
 import { Navbar, Nav, Container, Badge } from "react-bootstrap"
 import styles from './styles.module.css';
 
