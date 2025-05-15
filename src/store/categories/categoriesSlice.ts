@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetCategories from "./actions/actGetCategories";
-
+import type { TCategory } from "@customTypes/category";
+import type { TLoading } from "@customTypes/shared";
 // this is the state interface for the categories slice of the Redux store.
 interface ICategoriesState {
-    records: {id: number, title: string, prefix: string, img: string}[];
-    loading: 'idle' | 'pending' | 'succeeded' | 'failed';
+    records: TCategory[];
+    loading: TLoading;
     error: string | null;
 };
 
@@ -19,7 +20,7 @@ const initialState: ICategoriesState = {
 const categoriesSlice = createSlice({
     name: 'categories',
     initialState,
-    // here we define the action types and their corresponding action creators
+    // Define the reducers for the slice
     reducers: {
     },
     // here we handle the async actions
