@@ -10,8 +10,12 @@ function Categories() {
     (state) => state.Categories
   );
   useEffect(() => {
-    dispatch(actGetCategories());
-  }, [dispatch]);
+    // We can use this if categories will not change regularly
+    // but if it will change, we should use cleanUp action in reducers
+    if (!records.length) {
+      dispatch(actGetCategories());
+    }
+  }, [dispatch, records]);
 
   const categoriesList =
     records.length > 0
